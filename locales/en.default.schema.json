@@ -1059,6 +1059,20 @@
             "label": "Always, reduce logo size"
           }
         },
+        "transparent_overlay_header": {
+          "content": "Transparent overlay header"
+        },
+        "enable_transparent_header": {
+          "label": "Enable transparent overlay header"
+        },
+        "transparent_logo": {
+          "label": "Transparent overlay logo",
+          "info": "Only displaed when transparent overlay header is used."
+        },
+        "transparent_text_color": {
+          "label": "Overlay text color",
+          "info": "Ensure your text is readable on all templates. Learn more about [text accessibility](https://help.shopify.com/en/manual/online-store/themes/customizing-themes/accessibility#text-accessibility)."
+        },
         "margin_bottom": {
           "label": "Bottom margin"
         },
