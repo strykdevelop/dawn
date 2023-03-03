@@ -1063,7 +1063,7 @@
           "content": "Transparent overlay header"
         },
         "enable_transparent_header": {
-          "label": "Enable transparent overlay header"
+          "label": "Enable transparent overlay header on homepage"
         },
         "transparent_logo": {
           "label": "Transparent overlay logo",

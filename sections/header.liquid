@@ -32,11 +32,7 @@
     margin-left: -1.2rem;
   }
 
-  {% if section.settings.enable_transparent_header_home and request.page_type == 'index'
-    or section.settings.enable_transparent_header_page and request.page_type == 'page'
-    or section.settings.enable_transparent_header_collection and request.page_type == 'collection'
-    or section.settings.enable_transparent_header_blog and request.page_type == 'blog' or request.page_type == 'article'
-  %}
+  {% if section.settings.enable_transparent_header_home and request.page_type == 'index' %}
     .header-wrapper {
       position: absolute;
       width: 100%;
@@ -1013,25 +1009,7 @@
       "type": "checkbox",
       "id": "enable_transparent_header_home",
       "default": false,
-      "label": "Enable on Homepage"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_transparent_header_collection",
-      "default": false,
-      "label": "Enable on Collections"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_transparent_header_page",
-      "default": false,
-      "label": "Enable on Pages"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_transparent_header_blog",
-      "default": false,
-      "label": "Enable on Blog posts"
+      "label": "t:sections.header.settings.enable_transparent_header.label"
     },
     {
       "type": "image_picker",
