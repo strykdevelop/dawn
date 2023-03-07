@@ -3120,3 +3120,60 @@ details-disclosure > details {
 .rte blockquote > * {
   margin: -0.5rem 0 -0.5rem 0;
 }
+
+/* Animations */
+
+.scroll-animation__trigger {
+  transition: opacity 0.55s ease-in-out;
+  opacity: 0;
+}
+
+.scroll-animation__trigger--active {
+  animation: 0.55s ease-in-out slideIn forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Section-specific motion behavior. */
+
+.banner.scroll-animation__trigger,
+.banner.scroll-animation__trigger--active {
+  opacity: 1;
+  animation: none;
+}
+
+.banner__media.scroll-animation__trigger,
+.banner.scroll-animation__trigger:after {
+  transition: opacity var(--duration-long) ease-in-out;
+}
+
+.banner__media.scroll-animation__trigger--active,
+.banner.scroll-animation__trigger--active:after {
+  animation: none;
+  opacity: 1;
+}
+
+/* Turn off animations if JS is turned off. */
+.no-js .scroll-animation__trigger,
+.no-js .scroll-animation__trigger--active {
+  opacity: 1;
+  animation: none;
+}
+
+/* Respect the visitor's motion preferences. */
+@media (prefers-reduced-motion) {
+  .scroll-animation__trigger,
+  .scroll-animation__trigger--active {
+    opacity: 1;
+    animation: none;
+  }
+}
