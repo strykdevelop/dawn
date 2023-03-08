@@ -3130,6 +3130,7 @@ details-disclosure > details {
 
 .animate--slide-in {
   animation: slideIn var(--duration-long) ease-out forwards;
+  animation-delay: calc(var(--animation-order) * 100ms);
 }
 
 /* Turn off animations if JS is turned off. */
