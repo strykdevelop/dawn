@@ -429,7 +429,7 @@
                   {%- assign transparent_logo_height = section.settings.transparent_logo | divided_by: section.settings.transparent_logo.aspect_ratio -%}
                   {{ section.settings.transparent_logo | image_url: width: 600 | image_tag:
                     class: 'header__heading-logo motion-reduce header__heading-logo--transparent',
-                    widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                    widths: widths,
                     height: transparent_logo_height,
                     widths: widths,
                     alt: logo_alt,
