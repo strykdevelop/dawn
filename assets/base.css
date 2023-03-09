@@ -3124,12 +3124,12 @@ details-disclosure > details {
 /* Animations */
 
 .scroll-animation__trigger {
-  transition: opacity 0.55s ease-in-out;
+  transition: opacity var(--duration-long) ease-out;
   opacity: 0;
 }
 
 .scroll-animation__trigger--active {
-  animation: 0.55s ease-in-out slideIn forwards;
+  animation: var(--duration-long) ease-out slideIn forwards;
 }
 
 @keyframes slideIn {
