@@ -3123,13 +3123,29 @@ details-disclosure > details {
 
 /* Animations */
 
-.scroll-animation__trigger {
+.scroll-trigger--active {
   transition: opacity var(--duration-long) ease-out;
   opacity: 0;
 }
 
-.scroll-animation__trigger--active {
-  animation: var(--duration-long) ease-out slideIn forwards;
+.animate--slide-in {
+  animation: slideIn var(--duration-long) ease-out forwards;
+}
+
+/* Turn off animations if JS is turned off. */
+.no-js .scroll-trigger--active,
+.no-js .animate--slide-in {
+  opacity: 1;
+  animation: none;
+}
+
+/* Respect the visitor's motion preferences. */
+@media (prefers-reduced-motion) {
+  .scroll-trigger--active,
+  .animate--slide-in {
+    opacity: 1;
+    animation: none;
+  }
 }
 
 @keyframes slideIn {
@@ -3140,21 +3156,5 @@ details-disclosure > details {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-/* Turn off animations if JS is turned off. */
-.no-js .scroll-animation__trigger,
-.no-js .scroll-animation__trigger--active {
-  opacity: 1;
-  animation: none;
-}
-
-/* Respect the visitor's motion preferences. */
-@media (prefers-reduced-motion) {
-  .scroll-animation__trigger,
-  .scroll-animation__trigger--active {
-    opacity: 1;
-    animation: none;
   }
 }
