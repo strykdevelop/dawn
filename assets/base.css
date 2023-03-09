@@ -3143,25 +3143,6 @@ details-disclosure > details {
   }
 }
 
-/* Section-specific motion behavior. */
-
-.banner.scroll-animation__trigger,
-.banner.scroll-animation__trigger--active {
-  opacity: 1;
-  animation: none;
-}
-
-.banner__media.scroll-animation__trigger,
-.banner.scroll-animation__trigger:after {
-  transition: opacity var(--duration-long) ease-in-out;
-}
-
-.banner__media.scroll-animation__trigger--active,
-.banner.scroll-animation__trigger--active:after {
-  animation: none;
-  opacity: 1;
-}
-
 /* Turn off animations if JS is turned off. */
 .no-js .scroll-animation__trigger,
 .no-js .scroll-animation__trigger--active {

@@ -452,3 +452,20 @@
     color: currentColor;
   }
 }
+
+.banner.scroll-animation__trigger,
+.banner.scroll-animation__trigger--active {
+  opacity: 1;
+  animation: none;
+}
+
+.banner__media.scroll-animation__trigger,
+.banner.scroll-animation__trigger:after {
+  transition: opacity var(--duration-long) ease-in-out;
+}
+
+.banner__media.scroll-animation__trigger--active,
+.banner.scroll-animation__trigger--active:after {
+  animation: none;
+  opacity: 1;
+}
